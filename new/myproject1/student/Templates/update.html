@@ -1,0 +1,18 @@
+<html>
+<head>
+   <meta charset="utf-8" />
+    <title>add_user_info</title>
+</head>
+<body>
+<p align="center">
+    <form action="/update_result/" method="post">
+{% csrf_token %}
+<p>username:<input type="text" name="username"></p>
+<p>password:<input type="password" name="passwd">
+    update_password:<input type="password" name="update_passwd"></p>
+<p><input type="submit" value="save"></p>
+    </form>
+</p>
+{{ result }}
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>search</title>
+</head>
+<body>
+<p align="center">
+    <form action="/find/" method="post">
+{% csrf_token %}
+<p>userid:<input type="text" name="userid"></p>
+<p><input type="submit" value="search"></p>
+    </form>
+</p>
+
+ <table style="color: green" border="2">
+    <td>userid</td>
+    <td>username</td>
+     <td>password</td>
+     <td>createtime</td>
+    {% for m in datas %}
+       <tr>
+       <td>{{ m.userid }}</td>
+       <td>{{ m.username }}</td>
+       <td>{{ m.password }}</td>
+       <td>{{ m.createCounttime }}</td>
+       </tr>
+    {% endfor %}
+    </table>
+
+{{ result }}
+</body>
+</html>
